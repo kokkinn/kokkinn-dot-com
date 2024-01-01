@@ -1,0 +1,41 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #080f32;
+}
+
+#main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+#main-list {
+    list-style-type: none;
+}
+
+#main-list li {
+    font-size: 5rem;
+    transition: transform ease-in-out 0.2s;
+}
+
+#main-list li a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+#main-list li:hover {
+    transform: scale(1.2);
+}
