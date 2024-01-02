@@ -7,15 +7,19 @@ on:
 
 jobs:
   deploy:
+    name: Deploy to EC2
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: checkout code
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SOURCE: "src/"
+          SSH_PRIVATE_KEY: ${ { secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${ { secrets.HOST_DNS }}
+          REMOTE_USER: ${ { secrets.USERNAME }}
+          TARGET: ${ { secrets.TARGET_DIR }}
 
-      - name: Install SSH key
-        run: echo "${{ secrets.EC2_PEM }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 
-      - name: Deploy to EC2
-        run: scp -r ./src/* ubuntu@ec2-35-177-27-2.eu-west-2.compute.amazonaws.com:/var/www/html/
 
