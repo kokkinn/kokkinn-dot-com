@@ -1,5 +1,6 @@
 :root {
     font-size: 16px;
+    font-family: "PingFang SC", serif;
 }
 
 * {
@@ -18,9 +19,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-color: #b24b79;
+    height: 100vh;
+    /*background-color: #b24b79;*/
+    background: linear-gradient(120deg, #eeddf3, #ee92b1, #c5b720);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+
 }
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 
 #main-list {
     list-style-type: none;
@@ -31,11 +50,18 @@ body {
     transition: transform ease-in-out 0.2s;
 }
 
-#main-list li a{
-    text-decoration: none;
-    color: #67e55e;
+#main-list li:hover {
+    /*transform: scale(0.95);*/
 }
 
-#main-list li:hover {
-    transform: scale(1.2);
+#main-list li a {
+    text-shadow: #568309 0 0 0;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.1s ease-in-out, text-shadow 0.15s ease-in-out;
 }
+
+#main-list li a:hover {
+    text-shadow: #a41291 15px 0 0;
+}
+
