@@ -10,33 +10,24 @@
 }
 
 body {
-    height: 100vh;
-    background-color: #080f32;
+    background-color: #000000;
+    height: 100svh;
 }
 
 #main-box {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url("static/v1.mp4");
-    background-size: 600% 600%;
-    animation: gradient 8s ease infinite;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
 
 #main-list {
+    padding: 2rem;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+    /*border-left: black solid 1px;*/
+    /*border-right: black solid 1px;*/
     list-style-type: none;
 }
 
