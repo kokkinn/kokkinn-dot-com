@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: "PingFang SC", serif;
+    font-family: 'Optima', serif;
 }
 
 * {
@@ -8,7 +8,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 body {
     height: 100vh;
@@ -20,13 +19,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /*background-color: #b24b79;*/
-    background: linear-gradient(120deg, #eeddf3, #ee92b1, #c5b720);
-    background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
-
+    background: url("static/v1.mp4");
+    background-size: 600% 600%;
+    animation: gradient 8s ease infinite;
 }
-
 
 @keyframes gradient {
     0% {
@@ -40,7 +36,6 @@ body {
     }
 }
 
-
 #main-list {
     list-style-type: none;
 }
@@ -48,20 +43,66 @@ body {
 #main-list li {
     font-size: 5rem;
     transition: transform ease-in-out 0.2s;
+    margin: 1rem;
+}
+
+@media (max-width: 500px) {
+    #main-list li {
+        font-size: 3.5rem;
+    }
 }
 
 #main-list li:hover {
-    /*transform: scale(0.95);*/
+    /* transform: scale(0.95); */
 }
 
 #main-list li a {
-    text-shadow: #568309 0 0 0;
+    text-shadow: #91a66d 0 0 0;
     text-decoration: none;
-    color: #000000;
+    color: #3d0404;
     transition: color 0.1s ease-in-out, text-shadow 0.15s ease-in-out;
 }
 
-#main-list li a:hover {
-    text-shadow: #a41291 15px 0 0;
+#main-list li:nth-child(odd) a:hover {
+    text-shadow: rgba(54, 1, 1, 0.41) 20px 0;
 }
 
+#main-list li:nth-child(even) a:hover {
+    text-shadow: rgba(54, 1, 1, 0.41) -20px 0;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(2px);
+}
+
+#c {
+    position: fixed;
+    font-size: 1.5rem;
+    bottom: 0;
+    right: 0;
+    margin: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    #c {
+        margin: 0;
+        font-size: 1rem;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    video {
+        left: 30%;
+    }
+}
