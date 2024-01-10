@@ -13,8 +13,7 @@ body {
     background-color: #000000;
     height: 100svh;
 }
-
-#main-box {
+main {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -71,7 +70,7 @@ video {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    /*z-index: -1;*/
+    z-index: -1;
     filter: blur(2px);
 }
 
