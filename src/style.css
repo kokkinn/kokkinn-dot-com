@@ -25,9 +25,8 @@ main {
     padding: 2rem;
     border-top: black solid 1px;
     border-bottom: black solid 1px;
-    /*border-left: black solid 1px;*/
-    /*border-right: black solid 1px;*/
     list-style-type: none;
+    cursor: pointer;
 }
 
 #main-list li {
@@ -42,24 +41,18 @@ main {
     }
 }
 
-#main-list li:hover {
-    /* transform: scale(0.95); */
-}
 
 #main-list li a {
-    text-shadow: #91a66d 0 0 0;
     text-decoration: none;
     color: #3d0404;
-    transition: color 0.1s ease-in-out, text-shadow 0.15s ease-in-out;
+    transition: color 0.4s ease-in-out;
 }
 
-#main-list li:nth-child(odd) a:hover {
-    text-shadow: rgba(54, 1, 1, 0.41) 20px 0;
+#main-list li a:hover {
+    color: rgb(121, 18, 100);
 }
 
-#main-list li:nth-child(even) a:hover {
-    text-shadow: rgba(54, 1, 1, 0.41) -20px 0;
-}
+
 
 video {
     position: fixed;
