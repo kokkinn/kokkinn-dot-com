@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: 'Optima', serif;
+    font-family: 'Optima', sans-serif;
 }
 
 * {
@@ -10,9 +10,10 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #ffffff;
     height: 100svh;
 }
+
 main {
     height: 100%;
     display: flex;
@@ -22,17 +23,22 @@ main {
 
 
 #main-list {
-    padding: 2rem;
-    border-top: black solid 1px;
-    border-bottom: black solid 1px;
+    padding: 1rem;
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
     list-style-type: none;
-    cursor: pointer;
+    transition: padding-top 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
+}
+
+#main-list:hover {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
 }
 
 #main-list li {
     font-size: 5rem;
     transition: transform ease-in-out 0.2s;
-    margin: 1rem;
+    margin: 1.5rem;
 }
 
 @media (max-width: 500px) {
@@ -44,28 +50,15 @@ main {
 
 #main-list li a {
     text-decoration: none;
-    color: #3d0404;
-    transition: color 0.4s ease-in-out;
+    color: #000000;
+    transition: color 0.25s ease-in-out;
+    letter-spacing: 2px;
 }
 
 #main-list li a:hover {
-    color: rgb(121, 18, 100);
+    color: rgb(196, 22, 40);
 }
 
-
-
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    filter: blur(2px);
-}
 
 #c {
     position: fixed;
@@ -83,9 +76,5 @@ video {
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-    }
-
-    video {
-        left: 30%;
     }
 }
