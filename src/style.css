@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: 'Optima', sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 
 * {
@@ -24,26 +24,26 @@ main {
 
 #main-list {
     padding: 1rem;
-    border-top: black solid 2px;
-    border-bottom: black solid 2px;
+    /*border-top: black solid 2px;*/
+    /*border-bottom: black solid 2px;*/
     list-style-type: none;
     transition: padding-top 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
 }
 
 #main-list:hover {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    /*padding-top: 3.5rem;*/
+    /*padding-bottom: 3.5rem;*/
 }
 
 #main-list li {
-    font-size: 5rem;
+    font-size: 3rem;
     transition: transform ease-in-out 0.2s;
-    margin: 1.5rem;
+    margin: 3rem;
 }
 
 @media (max-width: 500px) {
     #main-list li {
-        font-size: 3.5rem;
+        font-size: 2.25rem;
     }
 }
 
@@ -62,10 +62,10 @@ main {
 
 #c {
     position: fixed;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     bottom: 0;
     right: 0;
-    margin: 1.5rem;
+    margin: 2.5rem;
 }
 
 @media (max-width: 500px) {
