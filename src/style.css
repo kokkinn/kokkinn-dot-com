@@ -23,7 +23,7 @@ main {
 
 
 #main-list {
-    padding: 1rem;
+    /*padding: 1rem;*/
     /*border-top: black solid 2px;*/
     /*border-bottom: black solid 2px;*/
     list-style-type: none;
@@ -35,10 +35,16 @@ main {
     /*padding-bottom: 3.5rem;*/
 }
 
+/*#main-list li:nth-child(odd) {*/
+/*    text-align: right;*/
+/*}*/
+
 #main-list li {
     font-size: 3rem;
     transition: transform ease-in-out 0.2s;
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: right;
 }
 
 @media (max-width: 500px) {
@@ -52,7 +58,7 @@ main {
     text-decoration: none;
     color: #000000;
     transition: color 0.25s ease-in-out;
-    letter-spacing: 2px;
+    letter-spacing: 19px;
 }
 
 #main-list li a:hover {
