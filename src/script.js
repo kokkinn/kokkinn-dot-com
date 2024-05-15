@@ -18,7 +18,7 @@ function generateNoise() {
             ctx.beginPath();
             ctx.moveTo(x, canvas.height * Math.random());
             ctx.lineTo(x, startY);
-            ctx.strokeStyle = 'rgba(165,165,165,0.3)';
+            ctx.strokeStyle = 'rgba(211,211,211,0.3)';
             ctx.stroke();
         }
     }
